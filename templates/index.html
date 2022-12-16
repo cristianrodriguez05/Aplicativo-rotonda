@@ -1,37 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-	<meta charset="utf-8">
-	<title>Cinema Inicio</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet" type="text/css" />
-	<script src="{{url_for('static',filename='js/jquery-1.4.2.min.js')}}" type="text/javascript"></script>
-	<script src="{{url_for('static',filename='js/cufon-yui.js')}}" type="text/javascript"></script>
-	<script src="{{url_for('static',filename='js/cufon-replace.js')}}" type="text/javascript"></script>
-	<script src="{{url_for('static',filename='js/Gill_Sans_400.font.js')}}" type="text/javascript"></script>
-	<script src="{{url_for('static',filename='js/script.js')}}" type="text/javascript"></script>
-	<!--[if lt IE 7]>
-	<script type="text/javascript" src="{{url_for('static',filename='js/ie_png.js')}}"></script>
-	<script type="text/javascript">ie_png.fix('.png, .link1 span, .link1');</script>
-	<link href="css/ie6.css" rel="stylesheet" type="text/css" />
-	<![endif]-->
+	<title>LogIn</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link href="{{url_for('static', filename='css/main.css')}}" rel="stylesheet" type="text/css" />
 </head>
-<body class="contenedor">
-	<div class="login">
-		<div id="header" >
-			<div class="row-1">
-				<div class="fleft"><a href="#">Cine <span>Landia</span></a></div>
-			</div>
-			<form class="row2" action="/inicio" method="post">
-				<img src="{{url_for('static',filename='images/usuario.png')}}" class="imagen">
-				<br>
-				<input type="email" name="email" class="ingreso" placeholder="Email"value="{{ request.form.email }}">
-				<br>
-				<input type="password" name="Pass" class="ingreso" placeholder="Contraseña" value="{{ request.form.Pass }}">
-				<br>
-				<input type="submit" value="Entrar" class="envio">
-			</form>
+<body class="cover" style="background-image: url(/static/images/loginFont.jpg);">
+	<form action="/inicio" method="post" autocomplete="off" class="full-box logInForm">
+		<p class="text-center text-muted"><i class="zmdi zmdi-account-circle zmdi-hc-5x"></i></p>
+		<p class="text-center text-muted text-uppercase">Inicia sesión con tu cuenta</p>
+		<div class="form-group label-floating">
+		  <label class="control-label" for="email">E-mail</label>
+		  <input id="email" name="email" class="ingreso" placeholder="Email"value="{{ request.form.email }}">
+		  <p class="help-block">Escribe tú E-mail</p>
 		</div>
-	</div>
+		<div class="form-group label-floating">
+		  <label class="control-label" for="Pass">Contraseña</label>
+		  <input type="password" name="Pass" class="ingreso" placeholder="Contraseña" value="{{ request.form.Pass }}">
+		  <p class="help-block">Escribe tú contraseña</p>
+		</div>
+		<div class="form-group text-center">
+			<input type="submit" value="Entrar" class="btn btn-raised btn-danger">
+		</div>
+	</form>
+	<!--====== Scripts -->
+	<script src="{{url_for('static',filename='js/logjquery-3.1.1.min.js')}}" type="text/javascript"></script>
+	<script src="{{url_for('static',filename='js/logbootstrap.min.js')}}" type="text/javascript"></script>
+	<script src="{{url_for('static',filename='js/logmaterial.min.js')}}" type="text/javascript"></script>
+	<script src="{{url_for('static',filename='js/logripples.min.js')}}" type="text/javascript"></script>
+	<script src="{{url_for('static',filename='js/logsweetalert2.min.js')}}" type="text/javascript"></script>
+	<script src="{{url_for('static',filename='js/logjquery.mCustomScrollbar.concat.min.js')}}" type="text/javascript"></script>
+	<script src="{{url_for('static',filename='js/logmain.js')}}" type="text/javascript"></script>
+	<script>
+		$.material.init();
+	</script>
 </body>
 </html>

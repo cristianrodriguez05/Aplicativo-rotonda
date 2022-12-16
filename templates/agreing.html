@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en-US" itemscope="itemscope" itemtype="http://schema.org/WebPage">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Pizzaro</title>
+      <link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" media="all"/>
+      <link href="{{url_for('static', filename='css/font-awesome.min.css')}}" rel="stylesheet" type="text/css" media="all"/>
+      <link href="{{url_for('static', filename='css/animate.min.css')}}" rel="stylesheet" type="text/css" media="all"/>
+      <link href="{{url_for('static', filename='css/font-pizzaro.css')}}" rel="stylesheet" type="text/css" media="all"/>
+      <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet" type="text/css" media="all"/>
+      <link href="{{url_for('static', filename='css/red.css')}}" rel="stylesheet" type="text/css" media="all"/>
+      <link href="{{url_for('static', filename='css/jquery.mCustomScrollbar.min.css')}}" rel="stylesheet" type="text/css" media="all"/>
+      <!-- Demo Purpose Only. Should be removed in production -->
+      <link href="{{url_for('static', filename='css/config.css')}}" rel="stylesheet" type="text/css" />
+      <link href="{{url_for('static', filename='css/green.css')}}" rel="alternate stylesheet" title="Green color" />
+      <link href="{{url_for('static', filename='css/pink.css')}}" rel="alternate stylesheet" title="Pink color" />
+      <link href="{{url_for('static', filename='css/blue.css')}}" rel="alternate stylesheet" title="Blue color" />
+      <link href="{{url_for('static', filename='css/red.css')}}" rel="alternate stylesheet" title="Red color" />
+      <link href="{{url_for('static', filename='css/orange.css')}}" rel="alternate stylesheet" title="Orange color" />
+      <link href="{{url_for('static', filename='css/gold.css')}}" rel="alternate stylesheet" title="Gold color" />
+      <link href="{{url_for('static', filename='css/navy.css')}}" rel="alternate stylesheet" title="Navy color" />
+      <link href="{{url_for('static', filename='css/flat-blue')}}" rel="alternate stylesheet" title="Flat Blue color" />
+      <!-- Demo Purpose Only. Should be removed in production : END -->      
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CYanone+Kaffeesatz:200,300,400,700" rel="stylesheet">
+      <link rel="shortcut icon" href="assets/images/fav-icon.png">
+   </head>
+   <body class="woocommerce-account">
+      <div id="page" class="hfeed site">
+         <header id="masthead" class="site-header header-v1"  style="background-image: none; ">
+            <div class="col-full">
+               <a class="skip-link screen-reader-text" href="#site-navigation">Skip to navigation</a>
+               <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+               <div class="header-wrap">
+                     <div class="site-branding">
+                        <a href="/inicio">
+                           <img src="{{url_for('static',filename='images/logos/logo1.png ')}}" class="img-responsive" alt="logoini">
+                        </a>
+                     </div>
+                     <nav id="site-navigation" class="main-navigation"  aria-label="Primary Navigation">
+                        <button class="menu-toggle" aria-controls="site-navigation" aria-expanded="false"><span class="close-icon"><i class="po po-close-delete"></i></span><span class="menu-icon"><i class="po po-menu-icon"></i></span><span class=" screen-reader-text">Menu</span></button>
+                        <div class="primary-navigation">
+                           <ul id="menu-main-menu" class="menu nav-menu" aria-expanded="false">
+                              <li class="menu-item"><a href="shop-grid-3-column.html">Agregar menu</a></li>
+                              <li class="menu-item"><a href="shop-grid-3-column.html">Agregar producto</a></li>
+                              <li class="menu-item"><a href="blog.html">Agregar ingrediente</a></li>
+                              <li class="menu-item"><a href="store-locator.html">Modificar menu</a></li>
+                           </ul>
+                        </div>
+                     </nav>
+               </div>
+
+            </div>
+         </header>
+         <div id="content" class="site-content" tabindex="-1" >
+            <div class="col-full">
+               <div class="pizzaro-breadcrumb">
+                  <nav class="woocommerce-breadcrumb" ><a href="/inicio">Inicio</a><span class="delimiter"><i class="po po-arrow-right-slider"></i></span>Agregar menu</nav>
+               </div>
+               <!-- .woocommerce-breadcrumb -->
+               <div id="primary" class="content-area">
+                  <main id="main" class="site-main" >
+                     <div id="post-10" class="post-10 page type-page status-publish hentry">
+                        <div class="entry-content">
+                           <div class="woocommerce">
+                              <div class="customer-login-form">
+                                 <span class="or-text">or</span>
+                                 <div class="u-columns col2-set" id="customer_login">
+                                    <div class="u-column1 col-1">
+                                       <h2>Registrar Menu</h2>
+                                       <form  class="login">
+                                          <p class="before-login-text">Aqui puede un restaurante agregar un nuevo menu</p>
+                                          <p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide">
+                                             <label for="inputid">Id Menu <span class="required">*</span></label>
+                                             <input class="form-control" id="inputid" name="id_menu" value="{{request.form['id_menu']}}">
+                                          </p>
+                                          <p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide">
+                                             <label for="inputnombre">Nombre <span class="required">*</span></label>
+                                             <input class="form-control" id="inputnombre" name="nombre_menu" value="{{request.form['nombre_menu']}}">
+                                          </p>
+                                          <p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide">
+                                             <label for="inputprecio">Precio <span class="required">*</span></label>
+                                             <input class="form-control" id="inputprecio" name="precio_menu" value="{{request.form['precio_menu']}}">
+                                          </p>
+                                          <p class="input-box">
+                                             <p class="input">
+                                                <select id="home-pages" name="home_page">
+                                                   <option value="">Elegir Restaurante</option>
+                                                   <option value="Pizza Hut">Pizza Hut</option>
+                                                   <option value="El Corral">El Corral</option>
+                                                   <option value="Pollo Frisby">Pollo Frisby</option>
+                                                   <option value="Juan Valdez">Juan Valdez</option>
+                                                </select>
+                                             </p>
+                                          </p>
+                                          <p class="form-row">
+                                             <input type="hidden" id="woocommerce-login-nonce" name="woocommerce-login-nonce" value="02aaeb6b10" />
+                                             <input type="hidden" name="_wp_http_referer" value="/pizzaro/my-account/" />
+                                             <input type="submit" class="woocommerce-Button button" name="Guardar" value="Guardar" />
+                                          </p>
+                                       </form>
+                                    </div>
+                                    <div class="u-column2 col-2">
+                                       <h2>Menus de los Restaurante</h2>
+                                       <form  class="register">
+                                          <div id="myTabContent" class="tab-content">
+                                             <div class="tab-pane fade active in" id="new">					
+                                                <div class="table-responsive">
+                                                   <table class="table table-hover text-center">
+                                                      <thead>
+                                                         <tr>
+                                                            <th class="text-center">Id</th>
+                                                            <th class="text-center">Nombre</th>
+                                                            <th class="text-center">Precio</th>
+                                                            <th class="text-center">Restaurante</th>
+                                                         </tr>
+                                                      </thead>
+                                                      <tbody>
+                                                         {%for i in resultados%}
+                                                         <tr>
+                                                           <td>{{i.id}}</td>
+                                                           <td>{{i.nombre}}</td>
+                                                           <td>{{i.precio}}</td>
+                                                           <td>{{i.restaurante}}</td>
+                                                         </tr>
+                                                         {%endfor%}
+                                                        </tbody>
+                                                   </table>
+                                                </div>
+                                               </div>
+                                          </div>
+                                       </form>
+                                    </div>
+                                 </div>
+                              </div>
+                              <!-- /.customer-login-form -->
+                           </div>
+                        </div>
+                        <!-- .entry-content -->
+                     </div>
+                     <!-- #post-## -->
+                  </main>
+                  <!-- #main -->
+               </div>
+               <!-- #primary -->
+            </div>
+            <!-- .col-full -->
+         </div>
+         <!-- #content -->
+         <div class="footer-v1-static-content">
+            <div class="kc-css-994088 kc_row">
+               <div class="kc-row-container  kc-container">
+                  <div class="kc-wrap-columns">
+                     <div class="kc-css-194963 kc_col-sm-12 kc_column kc_col-sm-12">
+                        <div class="stretch-full-width kc-col-container">
+                           <div class="kc-css-126640 kc_shortcode kc_wrap_instagram  kc_ins_col_6">
+                              <ul class="row">
+                                  <li class="col-md-2 col-sm-2 col-lg-2 col-xs-4"><a href="https://www.instagram.com/p/BO4Gyf2hTkr/" target="_blank"><img alt="" src="assets/images/footer/1.jpg"></a></li>
+                                  <li class="col-md-2 col-sm-2 col-lg-2 col-xs-4"><a href="https://www.instagram.com/p/BO4Gtf1BCmM/" target="_blank"><img alt="" src="assets/images/footer/2.jpg"></a></li>
+                                  <li class="col-md-2 col-sm-2 col-lg-2 col-xs-4"><a href="https://www.instagram.com/p/BO4GnvhBqNt/" target="_blank"><img alt="" src="assets/images/footer/3.jpg"></a></li>
+                                  <li class="col-md-2 col-sm-2 col-lg-2 col-xs-4"><a href="https://www.instagram.com/p/BO4GhsuhQE4/" target="_blank"><img alt="" src="assets/images/footer/4.jpg"></a></li>
+                                  <li class="col-md-2 col-sm-2 col-lg-2 col-xs-4"><a href="https://www.instagram.com/p/BO4F_ZbBuxI/" target="_blank"><img alt="" src="assets/images/footer/5.jpg"></a></li>
+                                  <li class="col-md-2 col-sm-2 col-lg-2 col-xs-4"><a href="https://www.instagram.com/p/BO4F8fLhgkp/" target="_blank"><img alt="" src="assets/images/footer/6.jpg"></a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <footer id="colophon" class="site-footer footer-v1">
+            <div class="col-full">
+               <div class="footer-social-icons">
+                  <span class="social-icon-text">Follow us</span>
+                  <ul class="social-icons list-unstyled">
+                     <li><a class="fa fa-facebook" href="#"></a></li>
+                     <li><a class="fa fa-twitter" href="#"></a></li>
+                     <li><a class="fa fa-instagram" href="#"></a></li>
+                     <li><a class="fa fa-youtube" href="#"></a></li>
+                     <li><a class="fa fa-dribbble" href="#"></a></li>
+                  </ul>
+               </div>
+               <div class="footer-logo">
+                  <a href="/inicio">
+                  <img src="{{url_for('static',filename='images/logos/logo2.png ')}}" class="img-responsive" alt="logofin">
+                  </a>
+               </div>
+               <div class="site-address">
+                  <ul class="address">
+                     <li>Rotonda Glotones</li>
+                     <li>Universidad Distrital Francisco Jose de Caldas</li>
+                     <li>Ingenieria de sistemas</li>
+                  </ul>
+               </div>
+               <div class="pizzaro-handheld-footer-bar">
+                  <ul class="columns-3">
+                     <li class="my-account">
+                        <a href="login-and-register.html">My Account</a>
+                     </li>
+                     <li class="search">
+                        <a href="">Search</a>
+                        <div class="site-search">
+                           <div class="widget woocommerce widget_product_search">
+                              <form role="search" method="get" class="woocommerce-product-search" >
+                                 <label class="screen-reader-text" for="woocommerce-product-search-field">Search for:</label>
+                                 <input type="search" id="woocommerce-product-search-field" class="search-field" placeholder="Search Products&hellip;" value="" name="s" title="Search for:" />
+                                 <input type="submit" value="Search" />
+                                 <input type="hidden" name="post_type" value="product" />
+                              </form>
+                           </div>
+                        </div>
+                     </li>
+                     <li class="cart">
+                        <a class="footer-cart-contents" href="cart.html" title="View your shopping cart">
+                        <span class="count">2</span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <!-- .col-full -->
+         </footer>
+         <!-- #colophon -->
+      </div>
+      <!-- For demo purposes – can be removed on production -->
+      <script src="{{url_for('static',filename='js/jquery.min.js')}}" type="text/javascript"></script>
+      <script src="{{url_for('static',filename='js/tether.min.js')}}" type="text/javascript"></script>
+      <script src="{{url_for('static',filename='js/bootstrap.min.js')}}" type="text/javascript"></script>
+      <script src="{{url_for('static',filename='js/owl.carousel.min.js')}}" type="text/javascript"></script>
+      
+      <script src="{{url_for('static',filename='js/social.share.min.js')}}" type="text/javascript"></script>
+      <script src="{{url_for('static',filename='js/jquery.mCustomScrollbar.concat.min.js')}}" type="text/javascript"></script>
+      <script src="{{url_for('static',filename='js/scripts.min.js')}}" type="text/javascript"></script>
+      <!-- For demo purposes – can be removed on production -->
+      <script src="{{url_for('static',filename='js/switchstylesheet.js')}}"></script>
+      <!-- For demo purposes – can be removed on production : End -->
+   </body>
+</html>

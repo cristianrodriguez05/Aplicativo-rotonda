@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en-US" itemscope="itemscope" itemtype="http://schema.org/WebPage">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Pizzaro</title>
+      <link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" media="all"/>
+      <link href="{{url_for('static', filename='css/font-awesome.min.css')}}" rel="stylesheet" type="text/css" media="all"/>
+      <link href="{{url_for('static', filename='css/animate.min.css')}}" rel="stylesheet" type="text/css" media="all"/>
+      <link href="{{url_for('static', filename='css/font-pizzaro.css')}}" rel="stylesheet" type="text/css" media="all"/>
+      <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet" type="text/css" media="all"/>
+      <link href="{{url_for('static', filename='css/blue.css')}}" rel="stylesheet" type="text/css" media="all"/>
+      <link href="{{url_for('static', filename='css/jquery.mCustomScrollbar.min.css')}}" rel="stylesheet" type="text/css" media="all"/>
+      <!-- Demo Purpose Only. Should be removed in production -->
+      <link href="{{url_for('static', filename='css/config.css')}}" rel="stylesheet" type="text/css" />
+      <link href="{{url_for('static', filename='css/green.css')}}" rel="alternate stylesheet" title="Green color" />
+      <link href="{{url_for('static', filename='css/pink.css')}}" rel="alternate stylesheet" title="Pink color" />
+      <link href="{{url_for('static', filename='css/blue.css')}}" rel="alternate stylesheet" title="Blue color" />
+      <link href="{{url_for('static', filename='css/red.css')}}" rel="alternate stylesheet" title="Red color" />
+      <link href="{{url_for('static', filename='css/orange.css')}}" rel="alternate stylesheet" title="Orange color" />
+      <link href="{{url_for('static', filename='css/gold.css')}}" rel="alternate stylesheet" title="Gold color" />
+      <link href="{{url_for('static', filename='css/navy.css')}}" rel="alternate stylesheet" title="Navy color" />
+      <link href="{{url_for('static', filename='css/flat-blue')}}" rel="alternate stylesheet" title="Flat Blue color" />
+      <!-- Demo Purpose Only. Should be removed in production : END -->
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CYanone+Kaffeesatz:200,300,400,700" rel="stylesheet">
+      <link href="{{url_for('static',filename='images/fav-icon.png')}}" rel="shortcut icon">
+   </head>
+   <body class="page-template-template-homepage-v1 home-v1">
+      <div id="page" class="hfeed site">
+         <header id="masthead" class="site-header header-v1" style="background-image: none; ">
+            <div class="col-full">
+               <a class="skip-link screen-reader-text" href="#site-navigation">Skip to navigation</a>
+               <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+               <div class="header-wrap">
+                  <div class="site-branding">
+                     <a href="/restaurantepollo">
+                        <img src="{{url_for('static',filename='images/logos/logo103.png ')}}" class="img-responsive" alt="logofin">
+                     </a>
+                  </div>
+                  <nav id="site-navigation" class="main-navigation" aria-label="Primary Navigation">
+                     <button class="menu-toggle" aria-controls="site-navigation" aria-expanded="false"><span class="close-icon"><i class="po po-close-delete"></i></span><span class="menu-icon"><i class="po po-menu-icon"></i></span><span class=" screen-reader-text">Menu</span></button>
+                     <div class="primary-navigation">
+                        <ul id="menu-main-menu" class="menu nav-menu" aria-expanded="false">
+                           <li class="menu-item"><a href="shop-grid-3-column.html">Menus</a></li>
+                           <li class="menu-item"><a href="blog.html">Productos</a></li>
+                           <li class="menu-item"><a href="store-locator.html">Tiendas</a></li>
+                        </ul>
+                     </div>
+                  </nav>
+                  <!-- #site-navigation -->
+                  <div class="header-info-wrapper">
+                     <div class="header-phone-numbers">
+                        <span class="intro-text">Contactenos</span>
+                        <h5><p style="color:#fcfafa";><span>pollofrisby@adm.com</span></p></h5>
+                     </div>
+                     <ul class="site-header-cart-v2 menu">
+                        <li class="cart-content ">
+                           <a href="cart.html" title="View your shopping cart">
+                           <i class="po po-scooter"></i>
+                           <span>Go to Your Cart</span>
+                           </a>
+                           <ul class="sub-menu">
+                              <li>
+                                 <a href="cart.html" title="View your shopping cart">
+                                 <span class="count">2 items</span> <span class="amount">$50.00</span>
+                                 </a>
+                              </li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </header>
+         <div id="content" class="site-content" tabindex="-1" >
+            <div class="col-full">
+               <div id="primary" class="content-area">
+                  <main id="main" class="site-main">
+                     <div class="home-v1-slider" >
+                        <div id="owl-main" class="owl-carousel owl-inner-nav owl-ui-sm">
+                           <div class="item slider-1" style="background-image: url(static/images/slider/pollo-slider-1.jpg);">
+                              <div class="caption fadeIn">
+                                 <div class="pre-title">
+                                    <div class="border front"></div>
+                                    <div class="lable">Nuevo!</div>
+                                    <div class="pre-title-value">OFERTA POR TIEMPO LIMITADO</div>
+                                    <div class="border back"></div>
+                                 </div>
+                                 <div class="title">FRISPICADA</div>
+                                 <div class="bottom-caption">Alitas  -  Yuca  -  Mazorca  -  Arepa</div>
+                              </div>
+                              <!-- /.caption -->
+                           </div>
+                           <!-- /.item -->
+                           <div class="item slider-2" style="background-image: url(static/images/slider/pollo-slider-2.jpg);">
+                              <div class="caption fadeIn">
+                                 <div class="title">POLLO BROASTER</div>
+                                 <div class="sub-title">Arepa  -  Papa</div>
+                              </div>
+                              <!-- /.caption -->
+                           </div>
+                           <!-- /.item -->
+                           <div class="item slider-3" style="background-image: url(static/images/slider/pollo-slider-3.jpg);">
+                              <div class="caption fadeIn">
+                                 <div class="pre-title">DESCUBRE QUE HAY DE NUEVO</div>
+                                 <div class="title"><span>y</span>ordena online</div>
+                              </div>
+                              <!-- /.caption -->
+                           </div>
+                           <!-- /.item -->
+                        </div>
+                        <!-- /.owl-carousel -->
+                     </div>
+                     <div class="section-tabs">
+                        <ul class="nav nav-tabs pizzaro-nav-tabs" >
+                           <li class="nav-item active">
+                              <a href="#h1-tab-products-2" class="active" data-toggle="tab">Menu</a>
+                           </li>
+                           <li class="nav-item">
+                              <a href="#h1-tab-products-3" data-toggle="tab">Productos</a>
+                           </li>
+                        </ul>
+                        <div class="tab-content">
+                           <div class="tab-pane active" id="h1-tab-products-2">
+                              <div class="section-products">
+                                 <div class="woocommerce columns-3">
+                                    <div class="columns-3">
+                                       <ul class="products">
+                                          <li class="product first">
+                                             <div class="product-outer">
+                                                <div class="product-inner">
+                                                   <div class="product-image-wrapper">
+                                                      <a href="single-product-v1.html" class="woocommerce-LoopProduct-link">
+                                                      <img src="assets/images/products/p4.jpg" class="img-responsive" alt="">
+                                                      </a>
+                                                   </div>
+                                                   <div class="product-content-wrapper">
+                                                      <a href="single-product-v1.html" class="woocommerce-LoopProduct-link">
+                                                         <h3>Italiano Original</h3>
+                                                         <div itemprop="description">
+                                                            <p style="max-height: none;">Extra-virgin olive oil, garlic, mozzarella, mushrooms and olives.</p>
+                                                         </div>
+                                                         <div class="yith_wapo_groups_container">
+                                                            <div class="ywapo_group_container ywapo_group_container_radio form-row form-row-wide " data-requested="1" data-type="radio" data-id="1" data-condition="">
+                                                               <h3><span>Pick Size</span></h3>
+                                                               <div class="ywapo_input_container ywapo_input_container_radio">
+
+
+                                                                  <span class="ywapo_label_tag_position_after"><span class="ywapo_option_label ywapo_label_position_after">22 cm</span></span><span class="ywapo_label_price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>19</span></span>
+                                                               </div>
+                                                               <div class="ywapo_input_container ywapo_input_container_radio">
+
+                                                                  <span class="ywapo_label_tag_position_after"><span class="ywapo_option_label ywapo_label_position_after">29 cm</span></span>
+                                                                  <span class="ywapo_label_price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>25</span></span>
+                                                               </div>
+                                                            </div>
+                                                         </div>
+                                                      </a>
+                                                      <div class="hover-area">
+                                                         <a rel="nofollow" href="single-product-v1.html" data-quantity="1" data-product_id="51" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <!-- /.product-outer -->
+                                          </li>
+                                          <!-- /.products -->
+                                          <li class="product ">
+                                             <div class="product-outer">
+                                                <div class="product-inner">
+                                                   <div class="product-image-wrapper">
+                                                      <a href="single-product-v1.html" class="woocommerce-LoopProduct-link">
+                                                      <img src="assets/images/products/p5.jpg" class="img-responsive" alt="">
+                                                      </a>
+                                                   </div>
+                                                   <div class="product-content-wrapper">
+                                                      <a href="single-product-v1.html" class="woocommerce-LoopProduct-link">
+                                                         <h3>Chicken Hawaii</h3>
+                                                         <div itemprop="description">
+                                                            <p style="max-height: none;">Extra-virgin olive oil, garlic, mozzarella, mushrooms and olives.</p>
+                                                         </div>
+                                                         <div class="yith_wapo_groups_container">
+                                                            <div class="ywapo_group_container ywapo_group_container_radio form-row form-row-wide " data-requested="1" data-type="radio" data-id="1" data-condition="">
+                                                               <h3><span>Pick Size</span></h3>
+                                                               <div class="ywapo_input_container ywapo_input_container_radio">
+
+
+                                                                  <span class="ywapo_label_tag_position_after"><span class="ywapo_option_label ywapo_label_position_after">22 cm</span></span><span class="ywapo_label_price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>19</span></span>
+                                                               </div>
+                                                               <div class="ywapo_input_container ywapo_input_container_radio">
+
+                                                                  <span class="ywapo_label_tag_position_after"><span class="ywapo_option_label ywapo_label_position_after">29 cm</span></span>
+                                                                  <span class="ywapo_label_price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>25</span></span>
+                                                               </div>
+                                                            </div>
+                                                         </div>
+                                                      </a>
+                                                      <div class="hover-area">
+                                                         <a rel="nofollow" href="single-product-v1.html" data-quantity="1" data-product_id="51" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <!-- /.product-outer -->
+                                          </li>
+                                          <!-- /.products -->
+                                          <li class="product last">
+                                             <div class="product-outer">
+                                                <div class="product-inner">
+                                                   <div class="product-image-wrapper">
+                                                      <a href="single-product-v1.html" class="woocommerce-LoopProduct-link">
+                                                      <img src="assets/images/products/p6.jpg" class="img-responsive" alt="">
+                                                      </a>
+                                                   </div>
+                                                   <div class="product-content-wrapper">
+                                                      <a href="single-product-v1.html" class="woocommerce-LoopProduct-link">
+                                                         <h3>Summer Pizza</h3>
+                                                         <div itemprop="description">
+                                                            <p style="max-height: none;">Extra-virgin olive oil, garlic, mozzarella, mushrooms and olives.</p>
+                                                         </div>
+                                                         <div class="yith_wapo_groups_container">
+                                                            <div class="ywapo_group_container ywapo_group_container_radio form-row form-row-wide " data-requested="1" data-type="radio" data-id="1" data-condition="">
+                                                               <h3><span>Pick Size</span></h3>
+                                                               <div class="ywapo_input_container ywapo_input_container_radio">
+
+
+                                                                  <span class="ywapo_label_tag_position_after"><span class="ywapo_option_label ywapo_label_position_after">22 cm</span></span><span class="ywapo_label_price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>19</span></span>
+                                                               </div>
+                                                               <div class="ywapo_input_container ywapo_input_container_radio">
+
+                                                                  <span class="ywapo_label_tag_position_after"><span class="ywapo_option_label ywapo_label_position_after">29 cm</span></span>
+                                                                  <span class="ywapo_label_price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>25</span></span>
+                                                               </div>
+                                                            </div>
+                                                         </div>
+                                                      </a>
+                                                      <div class="hover-area">
+                                                         <a rel="nofollow" href="single-product-v1.html" data-quantity="1" data-product_id="51" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <!-- /.product-outer -->
+                                          </li>
+                                          <!-- /.products -->
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="tab-pane" id="h1-tab-products-3">
+                              <div class="section-products">
+                                 <div class="woocommerce columns-3">
+                                    <div class="columns-3">
+                                       <ul class="products">
+                                          <li class="product first">
+                                             <div class="product-outer">
+                                                <div class="product-inner">
+                                                   <div class="product-image-wrapper">
+                                                      <a href="single-product-v1.html" class="woocommerce-LoopProduct-link">
+                                                      <img src="assets/images/products/p7.jpg" class="img-responsive" alt="">
+                                                      </a>
+                                                   </div>
+                                                   <div class="product-content-wrapper">
+                                                      <a href="single-product-v1.html" class="woocommerce-LoopProduct-link">
+                                                         <h3>Pepperoni Calzone</h3>
+                                                         <div itemprop="description">
+                                                            <p style="max-height: none;">Extra-virgin olive oil, garlic, mozzarella, mushrooms and olives.</p>
+                                                         </div>
+                                                         <div class="yith_wapo_groups_container">
+                                                            <div class="ywapo_group_container ywapo_group_container_radio form-row form-row-wide " data-requested="1" data-type="radio" data-id="1" data-condition="">
+                                                               <h3><span>Pick Size</span></h3>
+                                                               <div class="ywapo_input_container ywapo_input_container_radio">
+
+
+                                                                  <span class="ywapo_label_tag_position_after"><span class="ywapo_option_label ywapo_label_position_after">22 cm</span></span><span class="ywapo_label_price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>19</span></span>
+                                                               </div>
+                                                               <div class="ywapo_input_container ywapo_input_container_radio">
+
+                                                                  <span class="ywapo_label_tag_position_after"><span class="ywapo_option_label ywapo_label_position_after">29 cm</span></span>
+                                                                  <span class="ywapo_label_price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>25</span></span>
+                                                               </div>
+                                                            </div>
+                                                         </div>
+                                                      </a>
+                                                      <div class="hover-area">
+                                                         <a rel="nofollow" href="single-product-v1.html" data-quantity="1" data-product_id="51" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <!-- /.product-outer -->
+                                          </li>
+                                          <!-- /.products -->
+                                          <li class="product ">
+                                             <div class="product-outer">
+                                                <div class="product-inner">
+                                                   <div class="product-image-wrapper">
+                                                      <a href="single-product-v1.html" class="woocommerce-LoopProduct-link">
+                                                      <img src="assets/images/products/p8.jpg" class="img-responsive" alt="">
+                                                      </a>
+                                                   </div>
+                                                   <div class="product-content-wrapper">
+                                                      <a href="single-product-v1.html" class="woocommerce-LoopProduct-link">
+                                                         <h3>Pepperoni Pizza</h3>
+                                                         <div itemprop="description">
+                                                            <p style="max-height: none;">Extra-virgin olive oil, garlic, mozzarella, mushrooms and olives.</p>
+                                                         </div>
+                                                         <div class="yith_wapo_groups_container">
+                                                            <div class="ywapo_group_container ywapo_group_container_radio form-row form-row-wide " data-requested="1" data-type="radio" data-id="1" data-condition="">
+                                                               <h3><span>Pick Size</span></h3>
+                                                               <div class="ywapo_input_container ywapo_input_container_radio">
+
+
+                                                                  <span class="ywapo_label_tag_position_after"><span class="ywapo_option_label ywapo_label_position_after">22 cm</span></span><span class="ywapo_label_price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>19</span></span>
+                                                               </div>
+                                                               <div class="ywapo_input_container ywapo_input_container_radio">
+
+                                                                  <span class="ywapo_label_tag_position_after"><span class="ywapo_option_label ywapo_label_position_after">29 cm</span></span>
+                                                                  <span class="ywapo_label_price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>25</span></span>
+                                                               </div>
+                                                            </div>
+                                                         </div>
+                                                      </a>
+                                                      <div class="hover-area">
+                                                         <a rel="nofollow" href="single-product-v1.html" data-quantity="1" data-product_id="51" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <!-- /.product-outer -->
+                                          </li>
+                                          <!-- /.products -->
+                                          <li class="product last">
+                                             <div class="product-outer">
+                                                <div class="product-inner">
+                                                   <div class="product-image-wrapper">
+                                                      <a href="single-product-v1.html" class="woocommerce-LoopProduct-link">
+                                                      <img src="assets/images/products/p9.jpg" class="img-responsive" alt="">
+                                                      </a>
+                                                   </div>
+                                                   <div class="product-content-wrapper">
+                                                      <a href="single-product-v1.html" class="woocommerce-LoopProduct-link">
+                                                         <h3>Trio Cheese</h3>
+                                                         <div itemprop="description">
+                                                            <p style="max-height: none;">Extra-virgin olive oil, garlic, mozzarella, mushrooms and olives.</p>
+                                                         </div>
+                                                         <div class="yith_wapo_groups_container">
+                                                            <div class="ywapo_group_container ywapo_group_container_radio form-row form-row-wide " data-requested="1" data-type="radio" data-id="1" data-condition="">
+                                                               <h3><span>Pick Size</span></h3>
+                                                               <div class="ywapo_input_container ywapo_input_container_radio">
+
+
+                                                                  <span class="ywapo_label_tag_position_after"><span class="ywapo_option_label ywapo_label_position_after">22 cm</span></span><span class="ywapo_label_price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>19</span></span>
+                                                               </div>
+                                                               <div class="ywapo_input_container ywapo_input_container_radio">
+
+                                                                  <span class="ywapo_label_tag_position_after"><span class="ywapo_option_label ywapo_label_position_after">29 cm</span></span>
+                                                                  <span class="ywapo_label_price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>25</span></span>
+                                                               </div>
+                                                            </div>
+                                                         </div>
+                                                      </a>
+                                                      <div class="hover-area">
+                                                         <a rel="nofollow" href="single-product-v1.html" data-quantity="1" data-product_id="51" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <!-- /.product-outer -->
+                                          </li>
+                                          <!-- /.products -->
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- /.panel -->
+                        </div>
+                     </div>
+                     <div class="stretch-full-width section-products-sale-event"  style="background-size: cover; background-position: center center; background-image: url(static/images/homepage-banners/pollo.jpg ); height: 468px;">
+                        <div class="sale-event-content">
+                           <h3 class="pre-title"><span>ENVIO GRATIS CON</span></h3>
+                           <h2 class="section-title">LA PROMO DEL DIA</h2>
+                        </div>
+                     </div>
+                     <div class="features-list" >
+                        <div class="row">
+                           <div class="feature col-xs-12 col-sm-3">
+                              <div class="feature-icon"><i class="po po-best-quality"></i></div>
+                              <div class="feature-label">
+                                 <h4>Mejor Calidad</h4>
+                              </div>
+                           </div>
+                           <div class="feature col-xs-12 col-sm-3">
+                              <div class="feature-icon"><i class="po po-on-time"></i></div>
+                              <div class="feature-label">
+                                 <h4>A Tiempo</h4>
+                              </div>
+                           </div>
+                           <div class="feature col-xs-12 col-sm-3">
+                              <div class="feature-icon"><i class="po po-master-chef"></i></div>
+                              <div class="feature-label">
+                                 <h4>Chefs Expertos</h4>
+                              </div>
+                           </div>
+                           <div class="feature col-xs-12 col-sm-3">
+                              <div class="feature-icon"><i class="po po-ready-delivery"></i></div>
+                              <div class="feature-label">
+                                 <h4>Deliciosa Comida</h4>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </main>
+                  <!-- #main -->
+               </div>
+               <!-- #primary -->
+            </div>
+            <!-- .col-full -->
+         </div>
+         <!-- #content -->
+         <div class="footer-v1-static-content">
+            <div class="kc-css-994088 kc_row">
+               <div class="kc-row-container  kc-container">
+                  <div class="kc-wrap-columns">
+                     <div class="kc-css-194963 kc_col-sm-12 kc_column kc_col-sm-12">
+                        <div class="stretch-full-width kc-col-container">
+                           <div class="kc-css-126640 kc_shortcode kc_wrap_instagram  kc_ins_col_6">
+                              <ul class="row">
+                                  <li class="col-md-2 col-sm-2 col-lg-2 col-xs-4"><a href="https://www.instagram.com/p/BO4Gyf2hTkr/" target="_blank"><img alt="" src="assets/images/footer/1.jpg"></a></li>
+                                  <li class="col-md-2 col-sm-2 col-lg-2 col-xs-4"><a href="https://www.instagram.com/p/BO4Gtf1BCmM/" target="_blank"><img alt="" src="assets/images/footer/2.jpg"></a></li>
+                                  <li class="col-md-2 col-sm-2 col-lg-2 col-xs-4"><a href="https://www.instagram.com/p/BO4GnvhBqNt/" target="_blank"><img alt="" src="assets/images/footer/3.jpg"></a></li>
+                                  <li class="col-md-2 col-sm-2 col-lg-2 col-xs-4"><a href="https://www.instagram.com/p/BO4GhsuhQE4/" target="_blank"><img alt="" src="assets/images/footer/4.jpg"></a></li>
+                                  <li class="col-md-2 col-sm-2 col-lg-2 col-xs-4"><a href="https://www.instagram.com/p/BO4F_ZbBuxI/" target="_blank"><img alt="" src="assets/images/footer/5.jpg"></a></li>
+                                  <li class="col-md-2 col-sm-2 col-lg-2 col-xs-4"><a href="https://www.instagram.com/p/BO4F8fLhgkp/" target="_blank"><img alt="" src="assets/images/footer/6.jpg"></a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <footer id="colophon" class="site-footer footer-v1">
+            <div class="col-full">
+               <div class="footer-social-icons">
+                  <span class="social-icon-text">Follow us</span>
+                  <ul class="social-icons list-unstyled">
+                     <li><a class="fa fa-facebook" href="#"></a></li>
+                     <li><a class="fa fa-twitter" href="#"></a></li>
+                     <li><a class="fa fa-instagram" href="#"></a></li>
+                     <li><a class="fa fa-youtube" href="#"></a></li>
+                     <li><a class="fa fa-dribbble" href="#"></a></li>
+                  </ul>
+               </div>
+               <div class="footer-logo">
+                  <a href="/inicio">
+                  <img src="{{url_for('static',filename='images/logos/logo2.png ')}}" class="img-responsive" alt="logofin">
+                  </a>
+               </div>
+               <div class="site-address">
+                  <ul class="address">
+                     <li>Rotonda Glotones</li>
+                     <li>Universidad Distrital Francisco Jose de Caldas</li>
+                     <li>Ingenieria de sistemas</li>
+                  </ul>
+               </div>
+               <div class="pizzaro-handheld-footer-bar">
+                  <ul class="columns-3">
+                     <li class="my-account">
+                        <a href="login-and-register.html">My Account</a>
+                     </li>
+                     <li class="search">
+                        <a href="">Search</a>
+                        <div class="site-search">
+                           <div class="widget woocommerce widget_product_search">
+                              <form role="search" method="get" class="woocommerce-product-search" >
+                                 <label class="screen-reader-text" for="woocommerce-product-search-field">Search for:</label>
+                                 <input type="search" id="woocommerce-product-search-field" class="search-field" placeholder="Search Products&hellip;" value="" name="s" title="Search for:" />
+                                 <input type="submit" value="Search" />
+                                 <input type="hidden" name="post_type" value="product" />
+                              </form>
+                           </div>
+                        </div>
+                     </li>
+                     <li class="cart">
+                        <a class="footer-cart-contents" href="cart.html" title="View your shopping cart">
+                        <span class="count">2</span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <!-- .col-full -->
+         </footer>
+         <!-- #colophon -->
+      </div>
+   
+      <!-- For demo purposes – can be removed on production : End -->
+      <script src="{{url_for('static',filename='js/jquery.min.js')}}" type="text/javascript"></script>
+      <script src="{{url_for('static',filename='js/tether.min.js')}}" type="text/javascript"></script>
+      <script src="{{url_for('static',filename='js/bootstrap.min.js')}}" type="text/javascript"></script>
+      <script src="{{url_for('static',filename='js/owl.carousel.min.js')}}" type="text/javascript"></script>
+      
+      <script src="{{url_for('static',filename='js/social.share.min.js')}}" type="text/javascript"></script>
+      <script src="{{url_for('static',filename='js/jquery.mCustomScrollbar.concat.min.js')}}" type="text/javascript"></script>
+      <script src="{{url_for('static',filename='js/scripts.min.js')}}" type="text/javascript"></script>
+      <!-- For demo purposes – can be removed on production -->
+      <script src="{{url_for('static',filename='js/switchstylesheet.js')}}"></script>
+      <!-- For demo purposes – can be removed on production : End -->
+   </body>
+</html>
