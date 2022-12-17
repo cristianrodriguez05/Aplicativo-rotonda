@@ -1,0 +1,272 @@
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Pizzaro</title>
+   <link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" media="all"/>
+   <link href="{{url_for('static', filename='css/font-awesome.min.css')}}" rel="stylesheet" type="text/css" media="all"/>
+   <link href="{{url_for('static', filename='css/animate.min.css')}}" rel="stylesheet" type="text/css" media="all"/>
+   <link href="{{url_for('static', filename='css/font-pizzaro.css')}}" rel="stylesheet" type="text/css" media="all"/>
+   <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet" type="text/css" media="all"/>
+   <link href="{{url_for('static', filename='css/red.css')}}" rel="stylesheet" type="text/css" media="all"/>
+   <link href="{{url_for('static', filename='css/jquery.mCustomScrollbar.min.css')}}" rel="stylesheet" type="text/css" media="all"/>
+   <!-- Demo Purpose Only. Should be removed in production -->
+   <link href="{{url_for('static', filename='css/config.css')}}" rel="stylesheet" type="text/css" />
+   <link href="{{url_for('static', filename='css/green.css')}}" rel="alternate stylesheet" title="Green color" />
+   <link href="{{url_for('static', filename='css/pink.css')}}" rel="alternate stylesheet" title="Pink color" />
+   <link href="{{url_for('static', filename='css/blue.css')}}" rel="alternate stylesheet" title="Blue color" />
+   <link href="{{url_for('static', filename='css/red.css')}}" rel="alternate stylesheet" title="Red color" />
+   <link href="{{url_for('static', filename='css/orange.css')}}" rel="alternate stylesheet" title="Orange color" />
+   <link href="{{url_for('static', filename='css/gold.css')}}" rel="alternate stylesheet" title="Gold color" />
+   <link href="{{url_for('static', filename='css/navy.css')}}" rel="alternate stylesheet" title="Navy color" />
+   <link href="{{url_for('static', filename='css/flat-blue')}}" rel="alternate stylesheet" title="Flat Blue color" />
+   <!-- Demo Purpose Only. Should be removed in production : END -->
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CYanone+Kaffeesatz:200,300,400,700" rel="stylesheet">
+   <link href="{{url_for('static',filename='images/fav-icon.png')}}" rel="shortcut icon">
+</head>
+<body class="page-template-template-homepage-v1 home-v1">
+   <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header header-v1" style="background-image: none; ">
+         <div class="col-full">
+            <a class="skip-link screen-reader-text" href="#site-navigation">Skip to navigation</a>
+            <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+            <div class="header-wrap">
+               <div class="site-branding">
+                  <a href="/restaurantepizza">
+                     <img src="{{url_for('static',filename='images/logos/logo101.png ')}}" class="img-responsive" alt="logofin">
+                  </a>
+               </div>
+               <nav id="site-navigation" class="main-navigation" aria-label="Primary Navigation">
+                  <button class="menu-toggle" aria-controls="site-navigation" aria-expanded="false"><span class="close-icon"><i class="po po-close-delete"></i></span><span class="menu-icon"><i class="po po-menu-icon"></i></span><span class=" screen-reader-text">Menu</span></button>
+                  <div class="primary-navigation">
+                     <ul id="menu-main-menu" class="menu nav-menu" aria-expanded="false">
+                        <li class="menu-item"><a href="shop-grid-3-column.html">Menus</a></li>
+                        <li class="menu-item"><a href="blog.html">Productos</a></li>
+                        <li class="menu-item"><a href="store-locator.html">Tiendas</a></li>
+                     </ul>
+                  </div>
+               </nav>
+               <!-- #site-navigation -->
+               <div class="header-info-wrapper">
+                  <div class="header-phone-numbers">
+                     <span class="intro-text">Contactenos</span>
+                     <h5><p style="color:#fcfafa";><span>pizzahut@adm.com</span></p></h5>
+                  </div>
+                  <ul class="site-header-cart-v2 menu">
+                     <li class="cart-content ">
+                        <a href="cart.html" title="View your shopping cart">
+                        <i class="po po-scooter"></i>
+                        <span>Go to Your Cart</span>
+                        </a>
+                        <ul class="sub-menu">
+                           <li>
+                              <a href="cart.html" title="View your shopping cart">
+                              <span class="count">2 items</span> <span class="amount">$50.00</span>
+                              </a>
+                           </li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </header>
+         <div id="content" class="site-content" tabindex="-1" >
+            <div class="col-full">
+               <div class="pizzaro-breadcrumb">
+                  <nav class="woocommerce-breadcrumb" >
+                     <a href="index.html">Home</a>
+                     <span class="delimiter"><i class="po po-arrow-right-slider"></i></span>Cart
+                  </nav>
+               </div>
+               <!-- .woocommerce-breadcrumb -->
+               <div id="primary" class="content-area">
+                  <main id="main" class="site-main" >
+                     <div class="pizzaro-order-steps">
+                        <ul>
+                           <li class="cart">
+                              <span class="step">1</span>Shopping Cart
+                           </li>
+                           <li class="checkout">
+                              <span class="step">2</span>Checkout
+                           </li>
+                           <li class="complete">
+                              <span class="step">3</span>Order Complete
+                           </li>
+                        </ul>
+                     </div>
+                     <div id="post-8" class="post-8 page type-page status-publish hentry">
+                        <div class="entry-content">
+                           <div class="woocommerce">
+                              <form>
+                                 <table class="shop_table shop_table_responsive cart" >
+                                    <thead>
+                                       <tr>
+                                          <th class="product-remove">&nbsp;</th>
+                                          <th class="product-thumbnail">&nbsp;</th>
+                                          <th class="product-name">Product</th>
+                                          <th class="product-price">Price</th>
+                                          <th class="product-quantity">Quantity</th>
+                                          <th class="product-subtotal">Total</th>
+                                       </tr>
+                                    </thead>
+                                    <tbody>
+                                       <tr class="cart_item">
+                                          <td class="product-remove">
+                                             <a href="#" class="remove" >&times;</a>
+                                          </td>
+                                          <td class="product-thumbnail">
+                                             <a href="single-product-v1.html">
+                                                <img src="{{url_for('static',filename='images/products/pizzamenu1.png ')}}" class="img-responsive">
+                                             </a>
+                                          </td>
+                                          <td class="product-name" data-title="Product">
+                                             <a href="single-product-v1.html">Bacon Burger</a>
+                                             <dl class="variation">
+                                                <dt class="variation-Baseprice">Base price:</dt>
+                                                <dd class="variation-Baseprice">
+                                                   <p><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#036;</span>0.00</span></p>
+                                                </dd>
+                                                <dt class="variation-PickSizespanclasswoocommerce-Price-amountamountspanclasswoocommerce-Price-currencySymbol36span2590span">Pick Size ( <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#036;</span>25.90</span> ):
+                                                </dt>
+                                                <dd class="variation-PickSizespanclasswoocommerce-Price-amountamountspanclasswoocommerce-Price-currencySymbol36span2590span">
+                                                   <p>29  cm</p>
+                                                </dd>
+                                             </dl>
+                                          </td>
+                                          <td class="product-price" data-title="Price">
+                                             <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#36;</span>46900</span>
+                                          </td>
+                                          <td class="product-quantity" data-title="Quantity">
+                                             <div class="qty-btn">
+                                                <label>Quantity</label>
+                                                <div class="quantity">
+                                                   <input type="number" value="1" title="Qty" class="input-text qty text"/>
+                                                </div>
+                                             </div>
+                                          </td>
+                                          <td class="product-subtotal" data-title="Total">
+                                             <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#36;</span>46900</span>
+                                          </td>
+                                       </tr>
+                                       
+                                       <tr>
+                                          <td colspan="6" class="actions">
+                                             <div class="coupon">
+                                                <label for="coupon_code">Coupon:</label>
+                                                <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="Coupon code" />
+                                                <input type="submit" class="button" name="apply_coupon" value="Apply Coupon" />
+                                             </div>
+                                             <input type="submit" class="button" name="update_cart" value="Update Cart" />
+                                             <div class="wc-proceed-to-checkout">
+                                                <a href="checkout.html" class="checkout-button button alt wc-forward">Proceed to Checkout</a>
+                                             </div>
+                                             <input type="hidden" id="_wpnonce" name="_wpnonce" value="21ca9d92f8" /><input type="hidden" name="_wp_http_referer" value="/pizzaro/cart/" />
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </form>
+                              <div class="cart-collaterals">
+                                 <div class="cart_totals ">
+                                    <h2>Cart Totals</h2>
+                                    <table  class="shop_table shop_table_responsive">
+                                       <tr class="cart-subtotal">
+                                          <th>Subtotal</th>
+                                          <td data-title="Subtotal">
+                                             <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#36;</span>46900</span>
+                                          </td>
+                                       </tr>
+                                       <tr class="order-total">
+                                          <th>Total</th>
+                                          <td data-title="Total">
+                                             <strong><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#36;</span>46900</span></strong>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <div class="wc-proceed-to-checkout">
+                                       <button>Comprar</button>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- .entry-content -->
+                    </main><!-- #main -->
+               </div>
+               <!-- #post-## -->
+            </div>
+            <!-- #primary -->
+         </div>
+         <!-- .col-full -->
+      </div>
+      <!-- #content -->
+      
+         <footer id="colophon" class="site-footer footer-v1">
+            <div class="col-full">
+               <div class="footer-social-icons">
+                  <span class="social-icon-text">Follow us</span>
+                  <ul class="social-icons list-unstyled">
+                     <li><a class="fa fa-facebook" href="#"></a></li>
+                     <li><a class="fa fa-twitter" href="#"></a></li>
+                     <li><a class="fa fa-instagram" href="#"></a></li>
+                     <li><a class="fa fa-youtube" href="#"></a></li>
+                     <li><a class="fa fa-dribbble" href="#"></a></li>
+                  </ul>
+               </div>
+               <div class="footer-logo">
+                  <a href="/inicio">
+                  <img src="{{url_for('static',filename='images/logos/logo2.png ')}}" class="img-responsive" alt="logofin">
+                  </a>
+               </div>
+               <div class="site-address">
+                  <ul class="address">
+                     <li>Rotonda Glotones</li>
+                     <li>Universidad Distrital Francisco Jose de Caldas</li>
+                     <li>Ingenieria de sistemas</li>
+                  </ul>
+               </div>
+               <div class="pizzaro-handheld-footer-bar">
+                  <ul class="columns-3">
+                     <li class="my-account">
+                        <a href="login-and-register.html">My Account</a>
+                     </li>
+                     <li class="search">
+                        <a href="">Search</a>
+                        <div class="site-search">
+                           <div class="widget woocommerce widget_product_search">
+                              <form role="search" method="get" class="woocommerce-product-search" >
+                                 <label class="screen-reader-text" for="woocommerce-product-search-field">Search for:</label>
+                                 <input type="search" id="woocommerce-product-search-field" class="search-field" placeholder="Search Products&hellip;" value="" name="s" title="Search for:" />
+                                 <input type="submit" value="Search" />
+                                 <input type="hidden" name="post_type" value="product" />
+                              </form>
+                           </div>
+                        </div>
+                     </li>
+                     <li class="cart">
+                        <a class="footer-cart-contents" href="cart.html" title="View your shopping cart">
+                        <span class="count">2</span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <!-- .col-full -->
+         </footer>
+         <!-- #colophon -->
+      </div>
+      <!-- For demo purposes – can be removed on production : End -->
+      <script src="{{url_for('static',filename='js/jquery.min.js')}}" type="text/javascript"></script>
+      <script src="{{url_for('static',filename='js/tether.min.js')}}" type="text/javascript"></script>
+      <script src="{{url_for('static',filename='js/bootstrap.min.js')}}" type="text/javascript"></script>
+      <script src="{{url_for('static',filename='js/owl.carousel.min.js')}}" type="text/javascript"></script>
+      
+      <script src="{{url_for('static',filename='js/social.share.min.js')}}" type="text/javascript"></script>
+      <script src="{{url_for('static',filename='js/jquery.mCustomScrollbar.concat.min.js')}}" type="text/javascript"></script>
+      <script src="{{url_for('static',filename='js/scripts.min.js')}}" type="text/javascript"></script>
+      <!-- For demo purposes – can be removed on production -->
+      <script src="{{url_for('static',filename='js/switchstylesheet.js')}}"></script>
+      <!-- For demo purposes – can be removed on production : End -->
+   </body>
+</html>

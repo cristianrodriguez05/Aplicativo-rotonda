@@ -42,10 +42,10 @@
                         <button class="menu-toggle" aria-controls="site-navigation" aria-expanded="false"><span class="close-icon"><i class="po po-close-delete"></i></span><span class="menu-icon"><i class="po po-menu-icon"></i></span><span class=" screen-reader-text">Menu</span></button>
                         <div class="primary-navigation">
                            <ul id="menu-main-menu" class="menu nav-menu" aria-expanded="false">
-                              <li class="menu-item"><a href="shop-grid-3-column.html">Agregar menu</a></li>
-                              <li class="menu-item"><a href="shop-grid-3-column.html">Agregar producto</a></li>
-                              <li class="menu-item"><a href="blog.html">Agregar ingrediente</a></li>
-                              <li class="menu-item"><a href="store-locator.html">Modificar menu</a></li>
+                              <li class="menu-item"><a href="/agremenu">Agregar menu</a></li>
+                              <li class="menu-item"><a href="/agreprod">Agregar producto</a></li>
+                              <li class="menu-item"><a href="/agreing">Agregar ingrediente</a></li>
+                              <li class="menu-item"><a href="/modmenu">Modificar menu</a></li>
                            </ul>
                         </div>
                      </nav>
@@ -56,7 +56,7 @@
          <div id="content" class="site-content" tabindex="-1" >
             <div class="col-full">
                <div class="pizzaro-breadcrumb">
-                  <nav class="woocommerce-breadcrumb" ><a href="/inicio">Inicio</a><span class="delimiter"><i class="po po-arrow-right-slider"></i></span>Agregar menu</nav>
+                  <nav class="woocommerce-breadcrumb" ><a href="/inicio">Inicio</a><span class="delimiter"><i class="po po-arrow-right-slider"></i></span>Modificar menu</nav>
                </div>
                <!-- .woocommerce-breadcrumb -->
                <div id="primary" class="content-area">
@@ -68,9 +68,9 @@
                                  <span class="or-text">or</span>
                                  <div class="u-columns col2-set" id="customer_login">
                                     <div class="u-column1 col-1">
-                                       <h2>Registrar Menu</h2>
-                                       <form  class="login">
-                                          <p class="before-login-text">Aqui puede un restaurante agregar un nuevo menu</p>
+                                       <h2>Modificar Menu</h2>
+                                       <form  class="login" method="post">
+                                          <p class="before-login-text">Aqui puede un restaurante Modificar un menu existente</p>
                                           <p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide">
                                              <label for="inputid">Id Menu <span class="required">*</span></label>
                                              <input class="form-control" id="inputid" name="id_menu" value="{{request.form['id_menu']}}">
@@ -85,8 +85,8 @@
                                           </p>
                                           <p class="input-box">
                                              <p class="input">
-                                                <select id="home-pages" name="home_page">
-                                                   <option value="">Elegir Restaurante</option>
+                                                <select id="inputrestaurante_menu" class="form-select" name="restaurante_menu" value="{{ request.form['restaurante_menu'] }}">
+                                                   <option selected>Elegir Restaurante</option>
                                                    <option value="Pizza Hut">Pizza Hut</option>
                                                    <option value="El Corral">El Corral</option>
                                                    <option value="Pollo Frisby">Pollo Frisby</option>
@@ -95,15 +95,13 @@
                                              </p>
                                           </p>
                                           <p class="form-row">
-                                             <input type="hidden" id="woocommerce-login-nonce" name="woocommerce-login-nonce" value="02aaeb6b10" />
-                                             <input type="hidden" name="_wp_http_referer" value="/pizzaro/my-account/" />
-                                             <input type="submit" class="woocommerce-Button button" name="Guardar" value="Guardar" />
+                                             <button style="background-color:red; border-color:black" type="submit" class="btn btn-primary">Guardar</button>
                                           </p>
                                        </form>
                                     </div>
                                     <div class="u-column2 col-2">
-                                       <h2>Menus de los Restaurante</h2>
-                                       <form  class="register">
+                                       <h2>Menus de los Restaurantes</h2>
+                                       <form  class="register" method="get">
                                           <div id="myTabContent" class="tab-content">
                                              <div class="tab-pane fade active in" id="new">					
                                                 <div class="table-responsive">
@@ -117,7 +115,7 @@
                                                          </tr>
                                                       </thead>
                                                       <tbody>
-                                                         {%for i in resultados%}
+                                                         {%for i in resultadosmenu%}
                                                          <tr>
                                                            <td>{{i.id}}</td>
                                                            <td>{{i.nombre}}</td>
@@ -130,6 +128,7 @@
                                                 </div>
                                                </div>
                                           </div>
+                                          <button style="background-color:red; border-color:black" type="submit" class="btn btn-primary">Mostrar</button>
                                        </form>
                                     </div>
                                  </div>
